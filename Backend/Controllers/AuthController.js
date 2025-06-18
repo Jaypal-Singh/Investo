@@ -19,11 +19,11 @@ const bcrypt = require("bcryptjs");
       .json({ message: "User signed in successfully", success: true});
 
   } catch (error) {
-    res.status(500)
-            .json({
-                message : "Internal server error",
-                success : false,
-            })
+    console.error(error);
+    res.status(500).json({
+      message: "Internal server error",
+      success: false,
+    });
   }
 };
 
@@ -56,12 +56,11 @@ const Login = async (req, res, next) => {
     });
 
   } catch (error) {
-    res.status(500)
-            .json({
-                message : `Internal server error ${error}`,
-
-                success : false,
-            })
+    console.error(error);
+    res.status(500).json({
+      message: "Internal server error",
+      success: false,
+    });
   }
 };
 

@@ -62,16 +62,31 @@ router.post("/newOrder", verifyToken, async (req, res) => {
 
   if (mode === 'SELL') {
     const holdingExist = await HoldingModel.findOne({ name, userId });
+    const positionExist = await PositionsModel.findOne({ name, userId });
 
     if (holdingExist && holdingExist.qty >= qty) {
       const remainingQty = holdingExist.qty - qty;
       const remainingInvest = holdingExist.avg * remainingQty;
 
-      holdingExist.qty = remainingQty;
-      holdingExist.price = remainingInvest;
-      holdingExist.avg = remainingQty > 0 ? remainingInvest / remainingQty : 0;
+      if (remainingQty > 0) {
+        holdingExist.qty = remainingQty;
+        holdingExist.price = remainingInvest;
+        holdingExist.avg = remainingQty > 0 ? remainingInvest / remainingQty : 0;
+        await holdingExist.save();
 
-      await holdingExist.save();
+        if (positionExist) {
+          positionExist.qty = remainingQty;
+          positionExist.price = remainingInvest;
+          positionExist.avg = remainingQty > 0 ? remainingInvest / remainingQty : 0;
+          await positionExist.save();
+        }
+      } else {
+        // Remove holding and position if all stocks sold
+        await HoldingModel.deleteOne({ _id: holdingExist._id });
+        if (positionExist) {
+          await PositionsModel.deleteOne({ _id: positionExist._id });
+        }
+      }
     }
   }
 
