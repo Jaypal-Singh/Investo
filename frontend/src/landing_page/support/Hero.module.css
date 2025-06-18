@@ -1,0 +1,101 @@
+/* Hero.module.css */
+
+.supportHero {
+  background-color: #387ED1;
+  color: white;
+  height: 65vh;
+}
+
+.supportWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0px 40px;
+}
+
+.supportWrapperText {
+  color: white;
+  font-size: 22px;
+}
+
+.supportInput {
+  height: 4em;
+  width: 100%;
+  border: 1px solid rgb(129, 124, 124);
+  border-radius: 5px;
+}
+
+.in::placeholder {
+  font-size: 22px;
+}
+
+.in {
+  margin: 2em 0em 2em 0em;
+  padding: 38px 10px 38px 10px;
+}
+
+.supportSectionLink a{
+  font-size: 22px;
+  color: white;
+}
+
+.featuredList a {
+  color: white;
+}
+
+.featuredList {
+  position: relative;
+  left: 2em;
+  top: 3em;
+}
+
+.featuredTitle {
+  position: relative;
+  left: 1em;
+  top: 1em;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .supportSectionLink {
+    display: flex;
+    flex-direction: column;
+    line-height: 3em;
+  }
+
+  .supportSectionLink br {
+    display: none;
+  }
+
+  .supportWrapperText {
+    color: white;
+    font-size: 18px;
+  }
+
+  .featured {
+    all: unset;
+  }
+
+  .searchHeading {
+    display: none;
+  }
+
+  .supportWrapper {
+    padding: 8px 0px 0px 0px !important;
+  }
+
+  .in {
+    width: 100%;
+    margin: 1em 0em 1em 0em;
+    padding: 0px 0px 0px 0px;
+    height: 50px !important;
+    border-radius: 4px !important;
+  }
+
+  .in::placeholder {
+    font-size: 17px;
+  }
+
+  .supportHeroContainer {
+    all: unset;
+  }
+}

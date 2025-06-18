@@ -1,0 +1,40 @@
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.menuBar {
+  height: 55px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: end;
+    position: absolute;
+  z-index: 2000;   
+  width: 100%;     /* High z-index to show dropdown above dashboard */
+}
+.menuBar > *:first-child {
+  height: 55px;
+  width: 70%;  
+     /* High z-index to show dropdown above dashboard */
+}
+
+.dashboardArea {
+  flex: 1;
+  overflow: auto;
+  position: relative;
+}
+.dashboardArea > *:first-child{
+    z-index: 3000;
+    height: 100%;
+}
+
+@media (max-width: 1117px) {
+  .menuBar > *:first-child  {
+    width: 100%;
+    text-align: right;
+    position: relative;
+    width: 100%;
+  }
+}

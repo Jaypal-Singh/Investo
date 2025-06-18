@@ -1,0 +1,22 @@
+.links span a{
+    color: #387ED1;
+    text-decoration: none;
+    line-height: 2em;
+    font-size: 15px;
+    
+}
+.links{
+    margin-top: 3em;
+
+}
+
+.links h4 a i {
+    margin-right: 8px; /* or any space you want */
+
+  }
+  .links h4 a {
+    text-decoration: none; /* or any space you want */
+    color: #747171;
+    font-weight: 500;
+    font-size: 18px !important;
+  }

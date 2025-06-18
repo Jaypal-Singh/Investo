@@ -1,0 +1,118 @@
+/* Login.module.css */
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f7fa;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 24px;
+  font-size: 28px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #eee;
+  padding: 10px;
+}
+
+.inputGroup input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding-left: 10px;
+  font-size: 16px;
+  background: transparent;
+}
+
+.inputGroup i {
+  color: #aaa;
+}
+
+.forgot {
+  text-align: right;
+  font-size: 13px;
+  margin-top: -8px;
+  color: #6c63ff;
+  cursor: pointer;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+button {
+  padding: 14px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(to right, #6c63ff, #b84fe2);
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.divider {
+  margin: 20px 0;
+  font-size: 14px;
+  color: #888;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.socialIcons i {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.fb { background-color: #3b5998; }
+.tw { background-color: #55acee; }
+.goo { background-color: #dd4b39; }
+
+.signupText {
+  margin-top: 24px;
+  font-size: 14px;
+  color: #555;
+}
+
+.signupText a {
+  color: #6c63ff;
+  text-decoration: none;
+  font-weight: 600;
+}

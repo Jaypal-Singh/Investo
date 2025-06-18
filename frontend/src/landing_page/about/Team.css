@@ -1,0 +1,51 @@
+.heading-people {
+    font-size: 2em;
+  }
+  
+  .ceo {
+    font-size: 1.2em;
+    padding: 1em 0;
+  }
+  
+  .ceo-image-div {
+    text-align: center;
+    margin-top: 3em;
+  }
+  
+  .ceo-image {
+    border-radius: 50%;
+    width: 60%;
+    max-width: 250px;
+  }
+  
+  .ceo-name {
+    text-align: center;
+    margin-top: 1em;
+  }
+  
+  
+  .ceo-pera {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+  
+  .ceo-pera-div {
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.8;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .ceo-image-div {
+      text-align: right;
+      padding-right: 2rem;
+    }
+  
+    .ceo-pera-div {
+      padding-left: 2rem;
+    }
+  }
+  
