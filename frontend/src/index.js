@@ -13,21 +13,22 @@ import Footer from './landing_page/Footer';
 import NotFound from './landing_page/NotFound';
 import Login from './landing_page/signUp/Login';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-  <Navbar/>
-  <Routes>
-    <Route path = "/" element ={<HomePage/>}></Route>
-    <Route path = "signup" element ={<Signup/>}></Route>
-    <Route path='/login' element={<Login/>}></Route>
-    <Route path = "about" element ={<About/>}></Route>
-    <Route path = "products" element ={<Products/>}></Route>
-    <Route path = "pricing" element ={<Pricing/>}></Route>
-    <Route path = "support" element ={<Support/>}></Route>
-    <Route path = "*" element = {<NotFound/>}> </Route>
-  </Routes>
-  <Footer/>
+    <Navbar/>
+    <Routes>
+      <Route path="/" element={<HomePage/>}></Route>
+      <Route path="signup" element={<Signup/>}></Route>
+      <Route path="login" element={<Login/>}></Route>
+      <Route path="about" element={<About/>}></Route>
+      <Route path="products" element={<Products/>}></Route>
+      <Route path="pricing" element={<Pricing/>}></Route>
+      <Route path="support" element={<Support/>}></Route>
+      <Route path="*" element={<NotFound/>}> </Route>
+    </Routes>
+    <Footer/>
   </BrowserRouter>
 );
 

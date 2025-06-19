@@ -1,0 +1,50 @@
+/* Keep all your existing styles */
+.col a {
+    text-decoration: none;
+    color: #666;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 2;
+}
+a:hover{
+    color: rgba(2, 2, 246, 0.462);
+}
+footer{
+    background-color: rgb(250,250,250);
+}
+.footer-link{
+    line-height: 3em;
+    font-size: 1.2em;
+}
+.link a {
+    text-decoration: none;
+    color : #666;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 2;
+}
+
+.footer-bottum-link a{
+    text-decoration: none;
+    color: #666;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 2;
+    margin: 0 10px;
+}
+
+/* Add these responsive styles */
+@media (max-width: 768px) {
+    .col {
+        margin-bottom: 20px;
+    }
+    .footer-bottum-link a {
+        margin: 5px;
+        display: inline-block;
+    }
+    .footer-link i {
+        margin-right: 10px;
+    }
+}
+
+

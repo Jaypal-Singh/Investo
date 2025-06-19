@@ -36,7 +36,7 @@ function Login() {
       if (success) {
         localStorage.setItem('token', jwtToken);
         localStorage.setItem('loggedInUser', name);
-        window.location.href = `http://localhost:3001?token=${jwtToken}&name=${name}`;
+        window.location.href = `http://localhost:3000?token=${jwtToken}&name=${name}`;
       } else {
         alert(message || "Login failed");
       }
