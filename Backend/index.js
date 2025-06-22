@@ -22,7 +22,7 @@ const MONGO_URL = process.env.MONGO_URL;
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN.split(','),
+    origin: process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : [],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
