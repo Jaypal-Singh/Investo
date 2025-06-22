@@ -31,7 +31,7 @@ function Signup() {
     }
 
     try {
-      const res = await axios.post(`${REACT_APP_API_URL}/auth/signup`, {
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/auth/signup`, {
         name,
         email,
         password

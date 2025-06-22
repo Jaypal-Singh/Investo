@@ -21,7 +21,7 @@ const Holdings = () => {
     return;
   }
 
-  axios.get(`${REACT_APP_API_URL}/allHoldings`, {
+  axios.get(`${process.env.REACT_APP_API_URL}/allHoldings`, {
     headers: {
       Authorization: `Bearer ${token}`
     }

@@ -5,7 +5,7 @@ const Positions = () => {
   const [allPositions, setallPositions] = useState([]);
   useEffect(()=>{
     const token = localStorage.getItem('token');
-    axios.get(`${REACT_APP_API_URL}/allPositions`, {
+    axios.get(`${process.env.REACT_APP_API_URL}/allPositions`, {
       headers: {
         Authorization : `Bearer ${token}`
       }

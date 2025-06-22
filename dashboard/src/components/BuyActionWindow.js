@@ -15,7 +15,7 @@ const BuyActionWindow = ({ uid, stockPrice }) => {
 
   const handleBuyClick = () => {
      const token = localStorage.getItem("token");
-    axios.post(`${REACT_APP_API_URL}/newOrder`, {
+    axios.post(`${process.env.REACT_APP_API_URL}/newOrder`, {
       name: uid,
       qty: stockQuantity,
       price: Price,
