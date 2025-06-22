@@ -133,7 +133,7 @@ const Menu = () => {
                 className={styles.dropdownItem}
                 onClick={() => {
                   localStorage.clear();
-                  window.location.href = `http://localhost:3001/login`;
+                  window.location.href = `${REACT_APP_API_URL}/login`;
                 }}
               >
                 Logout

@@ -11,7 +11,7 @@ const Summary = () => {
   useEffect(() => {
   const token = localStorage.getItem("token");
 
-  axios.get("http://localhost:3002/user-summary", {
+  axios.get(`${REACT_APP_API_URL}/user-summary`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

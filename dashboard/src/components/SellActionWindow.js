@@ -16,7 +16,7 @@ const SellActionWindow = ({ uid, stockPrice, stockQty }) => {
     try {
       const token = localStorage.getItem('token');
       const res = await axios.post(
-        "http://localhost:3002/newOrder",
+        `${REACT_APP_API_URL}/newOrder`,
         {
           name: uid,
           qty: stockQuantity,

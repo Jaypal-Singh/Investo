@@ -16,7 +16,7 @@ const WatchList = ({ sidebar }) => {
   const fetchAllStocks = () => {
     const token = localStorage.getItem("token");
     axios
-      .get("http://localhost:3002/allLists", {
+      .get(`${REACT_APP_API_URL}/allLists`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -35,7 +35,7 @@ const WatchList = ({ sidebar }) => {
       return;
     }
     axios
-      .get("http://localhost:3002/getStock", {
+      .get(`${REACT_APP_API_URL}/getStock`, {
         headers: { Authorization: `Bearer ${token}` },
         params: { name: value },
       })
@@ -123,7 +123,7 @@ const WatchListAction = ({ uid, stockPrice }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3002/allHoldings", {
+      .get(`${REACT_APP_API_URL}/allHoldings`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {

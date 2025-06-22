@@ -39,7 +39,6 @@ const Dashboard = () => {
           <Route path="/funds" element={<Funds />} />
           <Route path="/apps" element={<Apps />} />
           <Route path="/watchlist" element={<WatchList />} />
-
         </Routes>
       </div>
     </div>

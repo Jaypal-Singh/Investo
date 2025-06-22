@@ -26,7 +26,7 @@ function Login() {
     }
 
     try {
-      const res = await axios.post("http://localhost:3002/auth/login", {
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/auth/signup`, {
         email,
         password
       });
@@ -36,7 +36,7 @@ function Login() {
       if (success) {
         localStorage.setItem('token', jwtToken);
         localStorage.setItem('loggedInUser', name);
-        window.location.href = `http://localhost:3000?token=${jwtToken}&name=${name}`;
+        window.location.href = `${process.env.REACT_APP_DASHBOARD_URL}?token=${jwtToken}&name=${name}`;
       } else {
         alert(message || "Login failed");
       }
