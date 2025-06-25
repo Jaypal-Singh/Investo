@@ -38,7 +38,7 @@ function Login() {
         localStorage.setItem('loggedInUser', name);
         window.location.href = `${process.env.REACT_APP_DASHBOARD_URL}?token=${jwtToken}&name=${name}`;
       } else {
-        alert(message || "Login failed");
+        alert(message);
       }
 
     } catch (err) {

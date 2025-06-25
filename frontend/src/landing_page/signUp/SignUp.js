@@ -41,7 +41,7 @@ function Signup() {
         navigate('/login');
       }
       else {
-        alert(res.data.message || "Signup failed");
+        alert(res.data.message);
       }
 
     } catch (err) {
