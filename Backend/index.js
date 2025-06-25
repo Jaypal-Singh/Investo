@@ -5,7 +5,6 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 
-
 const authRouter = require("./Routes/AuthRoute");
 const userRoute = require("./Routes/UserRoute");
 const HoldingsRoute = require("./Routes/HoldingsRoute");
@@ -32,7 +31,7 @@ app.use(cookieParser());
 app.use(express.json());
 
 // ------------------ ROUTES -----------------------
-app.use("/auth", authRouter);
+app.use("/api/auth", authRouter);
 app.use("/", userRoute);
 
 // GET Holdings
