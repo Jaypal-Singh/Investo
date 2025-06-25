@@ -5,7 +5,7 @@ const signUpValidation = (req,res,next)=>{
     const schema = Joi.object({
         name : Joi.string().required(),
         email : Joi.string().email().required(),
-        password : Joi.number().required(),
+        password : Joi.string().required(), // <-- FIXED
     });
 
     const { error } = schema.validate(req.body);
