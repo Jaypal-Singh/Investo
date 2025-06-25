@@ -31,23 +31,28 @@ function Signup() {
     }
 
     try {
-      const res = await axios.post(`${process.env.REACT_APP_API_URL}/auth/signup`, {
-        name,
-        email,
-        password
-      });
-      console.log(res.data)
-      if (res.data.success) {
-        navigate('/login');
-      }
-      else {
-        alert(res.data.message);
-      }
+  const res = await axios.post(`${process.env.REACT_APP_API_URL}/auth/signup`, {
+    name,
+    email,
+    password
+  });
+  console.log(res.data);
+  
+  if (res.data.success) {
+    navigate('/login');
+  } else {
+    alert(res.data.message || "Signup failed. Try again.");
+  }
 
-    } catch (err) {
-      alert("Some error occurred during signup.");
-      console.error(err);
-    }
+} catch (err) {
+  if (err.response && err.response.data && err.response.data.message) {
+    alert(err.response.data.message);
+  } else {
+    alert("An error occurred. Please try again later.");
+  }
+  console.error(err);
+}
+
   };
 
   return (
