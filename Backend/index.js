@@ -14,7 +14,7 @@ const ListRoute = require("./Routes/ListRoute")
 const Orders = require("./Routes/OrderRoute");
 
 const app = express();
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT;
 const MONGO_URL = process.env.MONGO_URL;
 
 // ------------------ MIDDLEWARE -------------------
