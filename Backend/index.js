@@ -21,8 +21,12 @@ const MONGO_URL = process.env.MONGO_URL;
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : [],
-    // origin: process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : [],
+    origin: [
+      "http://localhost:3000",
+      "http://localhost:3001",
+      "https://investo-frontend.onrender.com",
+      "https://investo-dashboard.onrender.com",
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
