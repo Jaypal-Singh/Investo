@@ -4,13 +4,18 @@ const bcrypt = require("bcryptjs");
 
  const Signup = async (req, res, next) => {
   try {
-    const { name, email, password, createdAt } = req.body;
+    const { name, email, password } = req.body;
     const existingUser = await UserModel.findOne({ email });
     if (existingUser) {
       return res.status(409)
             .json({ message: "User already exists" , success: false});
     }
-    const userModel = new UserModel ({ name, email, password, createdAt });
+    const userModel = new UserModel ({
+      name,
+      email,
+      password,
+      createdAt: new Date()
+    });
     userModel.password = await bcrypt.hash(password, 12);
 
     await userModel.save();
@@ -21,7 +26,7 @@ const bcrypt = require("bcryptjs");
   } catch (error) {
     console.error(error);
     res.status(500).json({
-      message: "Internal server error",
+      message: error.message || "Internal server error",
       success: false,
     });
   }
