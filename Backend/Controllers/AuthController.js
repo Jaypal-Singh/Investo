@@ -4,6 +4,7 @@ const bcrypt = require("bcryptjs");
 
  const Signup = async (req, res, next) => {
   try {
+    console.log("Signup API hit", req.body);
     const { name, email, password } = req.body;
     const existingUser = await UserModel.findOne({ email });
     if (existingUser) {
