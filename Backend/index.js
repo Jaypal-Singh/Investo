@@ -24,8 +24,8 @@ app.use(
     origin: [
       "http://localhost:3000",
       "http://localhost:3001",
-      "https://investo-frontend.onrender.com",
-      "https://investo-dashboard.onrender.com",
+      // "https://investo-frontend.onrender.com",
+      // "https://investo-dashboard.onrender.com",
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
